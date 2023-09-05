@@ -1,8 +1,12 @@
 import express from "express";
-import { registerCOntroller } from "../controllers/usercontroller";
+import {
+  registerCOntroller,
+  updateAddress,
+} from "../controllers/usercontroller";
 
-const route = express.Router();
+const userRoute = express.Router();
 
-route.post("/register", registerCOntroller);
+userRoute.post("/register", registerCOntroller);
+userRoute.post("/updateAddress", updateAddress);
 
-export default route;
+export default userRoute;
